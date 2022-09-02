@@ -1,0 +1,73 @@
+*{
+    font-family: "Inter", sans-serif !important;
+    font-weight: 500;
+    font-size: 16px;
+}
+.inputs{
+    margin-bottom: 5px;
+    border-radius: 15px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.39);
+
+}
+.eth-img{
+    width: 30px;
+    height: 30px;
+}
+#arrow{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    /*left: 40%;
+    top: 35%;*/
+    border: 2px solid rgb(24, 26, 30) !important;
+    z-index: 99 !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 2px;
+    width: fit-content;
+    transform: translate(220px, 110px);
+    border-radius: 15px !important;
+    color: rgba(255, 255, 255, 0.527);
+    background: rgb(15, 14, 14);
+}
+/*
+#arrow{
+    background: rgb(173, 173, 173);
+    width: 15px;
+    height: 15px;
+    border-radius: 50% !important;
+}
+*/
+.token-image {
+    width: 20px;
+}
+#ETH{
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translate(380px, 60px);
+    border-radius: 15px;
+    background-color: #333;
+    
+}
+#from-token-text{
+    color: white;
+    padding-left: 0;
+}
+#token{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    transform: translate(320px, 145px);
+}
+#to-token-selected{
+    border-radius: 15px;
+}
+#eth-input{
+    height: 80px;
+}
