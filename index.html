@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniswap Dex Clone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styleuni.css">
+</head>
+<body style=" background: rgb(42, 35, 45); color: white;">
+    <div class="container-fluid">
+        <div class="navbar navbar-expand-lg justify-content-between">
+            <div class="navbar-brand">
+                <img src="logo2.png" alt="Logo" style="border-radius: 50%; width: 40px; height: 40px;">
+            </div>
+            <ul class="nav nav-pills mb-0 justify-content-center" role="tablist" style="background-color: rgba(0, 0, 0, 0.594); border-radius:15px; margin-left: 200px;">
+                <li class="nav-items">
+                    <a href="#" class="nav-link active text-white" data-toggle="pill" style="background-color: #333; border-radius: 15px; margin: 1px;">Swap</a>
+                </li>
+                <li class="nav-items">
+                    <a href="#" class="nav-link text-white" data-toggle="pill">Pool</a>
+                </li>
+                <li class="nav-items">
+                    <a href="#" class="nav-link text-white" data-toggle="pill">Vote</a>
+                </li>
+                <li class="nav-items">
+                    <a href="#" class="nav-link text-white" data-toggle="pill">Charts<i class="bi-arrow-up-right"></i></a>
+                </li>
+            </ul>
+            <div class="nav">
+               <div class="dropdown">
+                    <a href="#eth" type="button" class="btn dropdown-toggle show text-white" data-toggle="dropdown" style="padding-left: 5px; border-radius:15px; background-color: #333;">
+                        <span><img src="eth.png" alt="eth" class="eth-img"></span>Ethereum</a>
+               </div>
+               <div class="dropdown-menu">
+                <a href="#btc" class="dropdown-item">Bitcoin</a>
+                <a href="#usdt" class="dropdown-item">USDT</a>
+                <a href="#dgc" class="dropdown-item">Dodgecoin</a>
+               </div>
+                <div style="padding-left: 10px;">
+                    <button class="btn text-primary" style="border-radius: 15px; background-color: rgba(9, 9, 107, 0.583); 
+                    padding-left: 10px; border-color: rgba(0, 0, 0, 0.646);">Connect Wallet</button>
+                </div>
+                <div style="padding-left: 10px;">
+                    <button class="btn text-white" style="background-color: #333; border-radius: 15px; border-color: #000;"><strong>...</strong></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="background-color:rgba(12, 9, 9, 0.76); border-radius:15px; height: 275px; width: 525px;">
+        <div style="display: grid; grid-template-columns: repeat(1, 1fr); padding-top: 10px; padding-bottom: 5px; margin: auto; width: 500px; margin-top: 100px;">
+            <p>Swap</p>
+            <input type="text" placeholder="0.0" class="inputs text-white" id="eth-input">
+            <div class="dropdown" id="ETH">
+                <button class="btn dropdown-toggle" type="button" data-toggle="modal"
+                    data-target="#modal-token" aria-haspopup="true" aria-expanded="false" id="from-token-selected">
+                    <img class="token-image" src="eth.png" alt="" id="token-default-img">
+                    <!--<img class="token-image" id="from-token-img">-->
+                    <span id="from-token-text">ETH</span>
+                </button>
+
+                <div class="modal fade" id="modal-token" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="eth-search-modal modal-dialog" role="document">
+                        <div class="eth-search-modal modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Select a
+                                    token</h5>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-search">
+                                    <input type="text" id="search-input" placeholder="Search name" onkeyup="filterFunction()">
+                                </div>
+                                <hr class="line-divider">
+                                <div class="all-coin" id="all-coin-list">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <i class="bi-arrow-down-square" id="arrow"></i>
+            <input type="text" placeholder="0.0" class="inputs text-white">
+            <div class="dropdown" id="token">
+                <button class="btn btn-primary dropdown-toggle" type="button"
+                    data-toggle="modal" data-target="#modal-token" aria-haspopup="true"
+                    aria-expanded="false" id="to-token-selected">
+                    <span id="select-token-text">select a token</span>
+                    <img class="token-image" id="to-token-img">
+                    <span id="to-token-text"></span>
+                </button>
+            </div>
+            <button class="btn text-primary"style="border-radius: 15px; background-color: rgba(9, 9, 107, 0.583); 
+            padding-left: 10px; height: 50px; border-color: rgba(0, 0, 0, 0.646); margin-top:5px;">Connect Wallet</button>
+        </div>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
