@@ -2,6 +2,8 @@
     font-family: "Inter", sans-serif !important;
     font-weight: 500;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 .inputs{
     margin-bottom: 5px;
@@ -13,6 +15,8 @@
 .eth-img{
     width: 30px;
     height: 30px;
+    border-radius: 50%;
+    padding: 5px;
 }
 #arrow{
     display: flex;
@@ -63,11 +67,14 @@
     align-items: flex-end;
     justify-content: center;
     position: absolute;
-    transform: translate(320px, 145px);
+    transform: translate(340px, 140px);
 }
-#to-token-selected{
-    border-radius: 15px;
-}
+
 #eth-input{
     height: 80px;
+}
+.main-head{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
