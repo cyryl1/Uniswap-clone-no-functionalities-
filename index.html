@@ -18,14 +18,16 @@
     <div id="bg" style="position: fixed; top:0; left:0; right: 0; 
     background: radial-gradient(50% 50% at 50% 50%, #fc077d10 0,rgba(255, 255, 255,0)100%);
     width: 200vw; height: 200vh; transform: translate(-50vw, -100vh); z-index: -1;"></div>
-    <div class="container-fluid">
+    <div class="container-fluid" id="first">
         <div class="navbar navbar-expand-lg justify-content-between">
             <div class="navbar-brand">
                 <img src="img/logo2.png" alt="Logo" style="border-radius: 50%; width: 40px; height: 40px;">
             </div>
-            <ul class="nav nav-pills mb-0 justify-content-center" role="tablist" style="background-color: rgba(0, 0, 0, 0.594); border-radius:15px; margin-left: 200px;">
+            <ul class="nav nav-pills mb-0 justify-content-center" id="nav" 
+            style="background-color: rgba(0, 0, 0, 0.594); border-radius:15px; margin-left: 200px;">
                 <li class="nav-items">
-                    <a href="#" class="nav-link active text-white" data-toggle="pill" style="background-color: #333; border-radius: 15px; margin: 1px;">Swap</a>
+                    <a href="#" class="nav-link active text-white" data-toggle="pill" 
+                    style="background-color: #333; border-radius: 15px; margin: 1px;">Swap</a>
                 </li>
                 <li class="nav-items">
                     <a href="#" class="nav-link text-white" data-toggle="pill">Pool</a>
@@ -37,7 +39,7 @@
                     <a href="#" class="nav-link text-white" data-toggle="pill">Charts<i class="bi-arrow-up-right"></i></a>
                 </li>
             </ul>
-            <div class="nav">
+            <div class="nav" id="left-nav">
                <div class="dropdown">
                     <a href="#eth" type="button" class="btn dropdown-toggle show text-white" data-toggle="dropdown" style="padding-left: 5px; border-radius:15px; background-color: #333;">
                         <span><img src="img/eth.png" alt="eth" class="eth-img"></span>Ethereum</a>
@@ -47,7 +49,7 @@
                 <a href="#usdt" class="dropdown-item">USDT</a>
                 <a href="#dgc" class="dropdown-item">Dodgecoin</a>
                </div>
-                <div style="padding-left: 10px;">
+                <div style="padding-left: 10px;" class="top-connect">
                     <button class="btn text-primary" style="border-radius: 15px; background-color: rgba(9, 9, 107, 0.583); 
                     padding-left: 10px; border-color: rgba(0, 0, 0, 0.646);">Connect Wallet</button>
                 </div>
@@ -58,7 +60,7 @@
         </div>
     </div>
 
-    <div class="container" style="background-color:rgba(12, 9, 9, 0.76); border-radius:15px; height: 275px; width: 525px;">
+    <div class="container" style="background-color:rgba(12, 9, 9, 0.76); border-radius:15px; height: 275px; width: 525px;" id="second">
         <div style="display: grid; grid-template-columns: repeat(1, 1fr); padding-top: 10px; padding-bottom: 5px; margin: auto; width: 500px; margin-top: 100px;">
             <div class="main-head">
                 <p>Swap</p>
