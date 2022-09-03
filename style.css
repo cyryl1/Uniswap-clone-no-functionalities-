@@ -4,6 +4,7 @@
     font-size: 16px;
     margin: 0;
     padding: 0;
+    flex-wrap: nowrap;
 }
 .inputs{
     margin-bottom: 5px;
@@ -77,4 +78,41 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+}
+
+
+@media screen and (max-width: 970px) {
+    #nav{
+        position: fixed;
+        bottom: 0;
+        transform: translate(50%, -50%);
+        right: 50%;
+        width: 309px;
+        flex-wrap: nowrap;
+
+    }   
+    .top-connect{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    #first{
+        flex-wrap: nowrap;
+    }
+    #left-nav{
+        float: left;
+        right: 0;
+        transform: translate(160px, 0);
+    }
+    
+    #second{
+        transform: translate(50px, 100px);
+    }
+
+    @media screen and (max-width: 415px) {
+        #second{
+            transform: translate(6px,20px);
+        }
+    }
 }
