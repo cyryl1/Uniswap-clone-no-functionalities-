@@ -37,7 +37,6 @@ body{
     border: 4px solid rgb(24, 26, 30) !important;
     z-index: 99 !important;
     cursor: pointer;
-    transition: all 0.2s ease;
     padding: 2px;
     width: fit-content;
     transform: translate(220px, 110px);
